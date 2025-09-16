@@ -3,12 +3,21 @@
     padding: 0;
 }
 
-.cards {
+.container {
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.cards {
+    display: flex;
     gap: 10px;
-    padding: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 320px;
+    width: 100%;
 }
 
 .card {
@@ -20,6 +29,18 @@
     border-radius: 15px;
     height: 280px;
     width: 420px;
+}
+
+.cards_1 {
+    transform: rotate(180deg);
+}
+
+.cards_1.rotate {
+    transform: rotate(0deg);
+}
+
+.cards_2.rotate {
+    transform: rotate(180deg);
 }
 
 .card > div {
@@ -39,6 +60,11 @@
     margin: 5px;
     height: 100%;
     opacity: 0;
+    width: 200px;
+}
+
+.keywords.show{
+    opacity: 1;
 }
 
 .card li {
@@ -47,4 +73,34 @@
 
 .battle .card:active .keywords {
     opacity: 1;
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.point_1, .point_2{
+    display: flex;
+}
+
+.point_1 {
+    transform: rotate(180deg);
+}
+
+.win_1,
+.win_2 {
+    display: none;
+}
+
+.win_1.active,
+.win_2.active {
+    display: inline;
 }
