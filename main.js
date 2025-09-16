@@ -174,6 +174,8 @@ let win_btn_1 = () => {
     setTimeout(() => {
         cards_1.classList.add('hide');
         cards_2.classList.add('hide');
+        cards_1.innerHTML = '';
+        cards_2.innerHTML = '';
         message.innerHTML = 'ゲームを開始します。' + player_1_name + 'に渡してください。<button onclick="_createCard()"">受け取りました</button>';
     }, 1000);
 }
@@ -187,6 +189,8 @@ let win_btn_2 = () => {
     setTimeout(() => {
         cards_1.classList.add('hide');
         cards_2.classList.add('hide');
+        cards_1.innerHTML = '';
+        cards_2.innerHTML = '';
         message.innerHTML = 'ゲームを開始します。' + player_1_name + 'に渡してください。<button onclick="_createCard()"">受け取りました</button>';
     }, 1000);
 }
