@@ -104,3 +104,7 @@
 .win_2.active {
     display: inline;
 }
+
+button {
+    font-size: 2em;
+}
